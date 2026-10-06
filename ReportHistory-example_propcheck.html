@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>propcheck report: ReportHistory-example.html</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Serif:wght@500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --ink:#1c2733; --slate:#56636f; --paper:#f3f5f2; --sheet:#ffffff; --rule:#d9dfdb;
+  --good:#1f7a52; --warn:#a86a12; --bad:#b23a26; --bad2:#7d2a1c; --muted:#9aa5ae;
+}
+* { box-sizing:border-box; }
+body { margin:0; background:var(--paper); color:var(--ink);
+  font:16px/1.6 "IBM Plex Sans", "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
+main { max-width:760px; margin:0 auto; padding:48px 24px 64px; }
+.file { color:var(--slate); font-size:14px; margin:0 0 28px; }
+h1 { font:600 clamp(28px,4.6vw,40px)/1.2 "IBM Plex Serif", Georgia, serif; margin:0 0 16px; letter-spacing:-0.01em; }
+h1 .num { color:var(--good); }
+.lede { font-size:19px; color:var(--slate); margin:0 0 40px; max-width:62ch; }
+section { background:var(--sheet); border:1px solid var(--rule); border-radius:6px; padding:24px 26px; margin:0 0 20px; }
+h2 { font:600 21px/1.3 "IBM Plex Serif", Georgia, serif; margin:0 0 6px; }
+.sub { color:var(--slate); margin:0 0 18px; font-size:15px; }
+.verdict { font-weight:600; margin:0 0 4px; }
+.verdict.good { color:var(--good); } .verdict.warn { color:var(--warn); } .verdict.bad { color:var(--bad); }
+table { width:100%; border-collapse:collapse; font-variant-numeric:tabular-nums; font-size:15px; }
+td, th { padding:7px 4px; border-bottom:1px solid var(--rule); text-align:left; }
+th { font-weight:500; color:var(--slate); }
+td:last-child, th:last-child { text-align:right; }
+.stats td:first-child { color:var(--slate); }
+.pos { color:var(--good); } .neg { color:var(--bad); }
+svg { width:100%; height:auto; display:block; margin:8px 0 4px; }
+svg .zero { stroke:var(--rule); stroke-dasharray:4 4; }
+svg .dd { fill:var(--bad); opacity:.10; }
+.bar { display:flex; height:26px; border-radius:4px; overflow:hidden; background:var(--rule); margin:10px 0 12px; }
+.seg.good { background:var(--good); } .seg.bad { background:var(--bad); }
+.seg.bad2 { background:var(--bad2); } .seg.muted { background:var(--muted); }
+.legend { list-style:none; padding:0; margin:0; display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:4px 16px; font-size:15px; }
+.dot { display:inline-block; width:10px; height:10px; border-radius:2px; margin-right:8px; vertical-align:0; }
+.dot.good { background:var(--good); } .dot.bad { background:var(--bad); }
+.dot.bad2 { background:var(--bad2); } .dot.muted { background:var(--muted); }
+details { font-size:15px; color:var(--slate); }
+summary { cursor:pointer; color:var(--ink); font-weight:500; }
+summary:focus-visible, a:focus-visible { outline:2px solid var(--ink); outline-offset:3px; }
+footer { margin-top:36px; font-size:15px; color:var(--slate); }
+footer a { color:var(--ink); }
+@media (max-width:520px) { section { padding:18px 16px; } .lede { font-size:17px; } }
+</style></head>
+<body><main>
+<p class="file">ReportHistory-example.html · 180 trades over 77 trading days · 04 Mar 2026 to 03 Jul 2026</p>
+
+<h1><span class="num">79%</span> of simulated challenges passed with these trades.</h1>
+<p class="lede">Some sign of an edge, but luck could still explain it. Your early and recent trades disagree, so treat this with extra caution. The pass rate assumes your past trading continues unchanged. Rules used: 10% profit target, 5% daily loss limit, 10% max loss, at least 4 trading days, within 60 trading days, typically within 16 trading days.</p>
+
+<section>
+<h2>Challenge simulation</h2>
+<p class="sub">Your real trading days were replayed in random order 5,000 times, sized to your account.</p>
+<div class="bar"><span class="seg good" style="width:78.70%" title="Passed: 78.7%"></span><span class="seg bad2" style="width:18.20%" title="Hit max loss: 18.2%"></span><span class="seg muted" style="width:3.10%" title="Ran out of days: 3.1%"></span></div><ul class="legend"><li><span class="dot good"></span>Passed <b>78.7%</b></li><li><span class="dot bad"></span>Hit daily loss limit <b>0.0%</b></li><li><span class="dot bad2"></span>Hit max loss <b>18.2%</b></li><li><span class="dot muted"></span>Ran out of days <b>3.1%</b></li></ul>
+</section>
+
+<section>
+<h2>Skill or luck</h2>
+<p class="verdict warn">Some sign of an edge, but luck could still explain it.</p>
+<p class="sub">Random-direction versions of your exact trades did at least as well 8% of the time.
+A typical trade is worth between -$24.39 and $327.20 (90% range).</p>
+</section>
+
+<section>
+<h2>Results after costs</h2>
+<p class="sub">Every figure includes commission and swap.</p>
+<svg viewBox="0 0 720 220" role="img" aria-label="Equity curve after costs"><line x1="8" x2="712" y1="202.5" y2="202.5" class="zero"/><polygon points="8.0,202.5 11.9,202.5 15.8,202.5 19.7,202.5 23.6,200.6 27.6,195.6 31.5,190.6 35.4,186.9 39.3,179.5 43.2,173.0 47.1,173.0 51.0,170.8 54.9,166.6 58.8,161.6 62.8,161.6 66.7,158.7 70.6,158.7 74.5,158.7 78.4,158.7 82.3,154.4 86.2,148.1 90.1,142.8 94.0,136.6 98.0,136.6 101.9,133.8 105.8,127.0 109.7,127.0 113.6,127.0 117.5,127.0 121.4,127.0 125.3,127.0 129.2,127.0 133.2,127.0 137.1,127.0 141.0,127.0 144.9,127.0 148.8,127.0 152.7,127.0 156.6,127.0 160.5,127.0 164.4,125.0 168.4,116.7 172.3,111.0 176.2,104.5 180.1,98.7 184.0,98.7 187.9,96.3 191.8,96.3 195.7,96.3 199.6,96.3 203.6,96.3 207.5,96.3 211.4,96.3 215.3,96.3 219.2,96.3 223.1,96.3 227.0,96.3 230.9,96.3 234.8,96.3 238.8,96.3 242.7,96.3 246.6,96.3 250.5,96.3 254.4,96.3 258.3,96.3 262.2,96.3 266.1,96.3 270.0,96.3 274.0,96.3 277.9,96.3 281.8,96.3 285.7,96.3 289.6,90.1 293.5,85.8 297.4,79.5 301.3,73.1 305.2,64.4 309.2,57.5 313.1,57.5 317.0,57.5 320.9,53.3 324.8,53.3 328.7,53.3 332.6,53.3 336.5,53.3 340.4,53.3 344.4,52.7 348.3,52.7 352.2,52.7 356.1,52.7 360.0,52.7 363.9,52.7 367.8,52.7 371.7,52.7 375.6,52.7 379.6,52.7 383.5,52.7 387.4,52.7 391.3,52.7 395.2,52.7 399.1,52.7 403.0,52.7 406.9,52.7 410.8,50.9 414.8,47.5 418.7,41.2 422.6,41.2 426.5,41.2 430.4,41.2 434.3,41.2 438.2,41.2 442.1,41.2 446.0,41.2 450.0,41.2 453.9,41.2 457.8,41.2 461.7,41.2 465.6,41.2 469.5,41.2 473.4,36.7 477.3,28.0 481.2,21.9 485.2,17.7 489.1,17.7 493.0,17.2 496.9,12.0 500.8,12.0 504.7,12.0 508.6,12.0 512.5,12.0 516.4,12.0 520.4,12.0 524.3,12.0 528.2,12.0 532.1,12.0 536.0,12.0 539.9,12.0 543.8,12.0 547.7,12.0 551.6,12.0 555.6,12.0 559.5,12.0 563.4,12.0 567.3,12.0 571.2,12.0 575.1,12.0 579.0,12.0 582.9,12.0 586.8,12.0 590.8,12.0 594.7,12.0 598.6,12.0 602.5,12.0 606.4,12.0 610.3,12.0 614.2,12.0 618.1,12.0 622.0,12.0 626.0,12.0 629.9,12.0 633.8,12.0 637.7,12.0 641.6,12.0 645.5,12.0 649.4,12.0 653.3,12.0 657.2,12.0 661.2,12.0 665.1,12.0 669.0,12.0 672.9,12.0 676.8,12.0 680.7,12.0 684.6,12.0 688.5,12.0 692.4,12.0 696.4,12.0 700.3,12.0 704.2,12.0 708.1,12.0 712.0,12.0 712.0,98.2 708.1,93.8 704.2,98.9 700.3,93.2 696.4,88.7 692.4,85.6 688.5,93.5 684.6,98.7 680.7,94.3 676.8,98.3 672.9,104.9 669.0,99.5 665.1,94.4 661.2,89.1 657.2,82.5 653.3,77.0 649.4,82.5 645.5,87.1 641.6,81.7 637.7,86.3 633.8,80.8 629.9,76.2 626.0,72.5 622.0,68.3 618.1,75.6 614.2,71.0 610.3,65.1 606.4,60.0 602.5,66.7 598.6,71.9 594.7,67.0 590.8,71.0 586.8,75.8 582.9,70.9 579.0,66.8 575.1,61.3 571.2,56.4 567.3,51.1 563.4,55.6 559.5,51.2 555.6,55.3 551.6,51.4 547.7,48.3 543.8,43.7 539.9,38.3 536.0,43.9 532.1,39.5 528.2,34.4 524.3,30.2 520.4,26.7 516.4,32.9 512.5,35.1 508.6,29.5 504.7,23.6 500.8,17.1 496.9,12.0 493.0,17.2 489.1,23.0 485.2,17.7 481.2,21.9 477.3,28.0 473.4,36.7 469.5,44.2 465.6,48.0 461.7,43.2 457.8,49.2 453.9,52.7 450.0,59.2 446.0,52.1 442.1,48.0 438.2,41.9 434.3,49.3 430.4,45.8 426.5,51.4 422.6,46.5 418.7,41.2 414.8,47.5 410.8,50.9 406.9,57.1 403.0,64.1 399.1,69.7 395.2,64.5 391.3,70.7 387.4,77.6 383.5,72.6 379.6,66.8 375.6,62.0 371.7,66.2 367.8,70.5 363.9,67.0 360.0,73.3 356.1,67.9 352.2,63.0 348.3,58.3 344.4,52.7 340.4,58.4 336.5,54.1 332.6,58.7 328.7,54.8 324.8,59.0 320.9,53.3 317.0,58.1 313.1,63.5 309.2,57.5 305.2,64.4 301.3,73.1 297.4,79.5 293.5,85.8 289.6,90.1 285.7,98.2 281.8,105.6 277.9,111.6 274.0,117.7 270.0,111.5 266.1,105.0 262.2,99.0 258.3,104.2 254.4,110.7 250.5,106.6 246.6,101.4 242.7,107.9 238.8,115.1 234.8,120.9 230.9,127.5 227.0,122.5 223.1,118.0 219.2,112.8 215.3,109.6 211.4,105.7 207.5,111.2 203.6,117.0 199.6,112.3 195.7,106.5 191.8,101.6 187.9,96.3 184.0,104.0 180.1,98.7 176.2,104.5 172.3,111.0 168.4,116.7 164.4,125.0 160.5,130.6 156.6,136.1 152.7,140.1 148.8,145.1 144.9,151.3 141.0,146.2 137.1,141.6 133.2,147.2 129.2,141.7 125.3,137.2 121.4,144.9 117.5,140.2 113.6,135.7 109.7,131.0 105.8,127.0 101.9,133.8 98.0,140.0 94.0,136.6 90.1,142.8 86.2,148.1 82.3,154.4 78.4,161.2 74.5,167.7 70.6,162.9 66.7,158.7 62.8,165.7 58.8,161.6 54.9,166.6 51.0,170.8 47.1,177.3 43.2,173.0 39.3,179.5 35.4,186.9 31.5,190.6 27.6,195.6 23.6,200.6 19.7,206.9 15.8,202.6 11.9,208.0 8.0,202.5" class="dd"/><polyline points="8.0,202.5 11.9,208.0 15.8,202.6 19.7,206.9 23.6,200.6 27.6,195.6 31.5,190.6 35.4,186.9 39.3,179.5 43.2,173.0 47.1,177.3 51.0,170.8 54.9,166.6 58.8,161.6 62.8,165.7 66.7,158.7 70.6,162.9 74.5,167.7 78.4,161.2 82.3,154.4 86.2,148.1 90.1,142.8 94.0,136.6 98.0,140.0 101.9,133.8 105.8,127.0 109.7,131.0 113.6,135.7 117.5,140.2 121.4,144.9 125.3,137.2 129.2,141.7 133.2,147.2 137.1,141.6 141.0,146.2 144.9,151.3 148.8,145.1 152.7,140.1 156.6,136.1 160.5,130.6 164.4,125.0 168.4,116.7 172.3,111.0 176.2,104.5 180.1,98.7 184.0,104.0 187.9,96.3 191.8,101.6 195.7,106.5 199.6,112.3 203.6,117.0 207.5,111.2 211.4,105.7 215.3,109.6 219.2,112.8 223.1,118.0 227.0,122.5 230.9,127.5 234.8,120.9 238.8,115.1 242.7,107.9 246.6,101.4 250.5,106.6 254.4,110.7 258.3,104.2 262.2,99.0 266.1,105.0 270.0,111.5 274.0,117.7 277.9,111.6 281.8,105.6 285.7,98.2 289.6,90.1 293.5,85.8 297.4,79.5 301.3,73.1 305.2,64.4 309.2,57.5 313.1,63.5 317.0,58.1 320.9,53.3 324.8,59.0 328.7,54.8 332.6,58.7 336.5,54.1 340.4,58.4 344.4,52.7 348.3,58.3 352.2,63.0 356.1,67.9 360.0,73.3 363.9,67.0 367.8,70.5 371.7,66.2 375.6,62.0 379.6,66.8 383.5,72.6 387.4,77.6 391.3,70.7 395.2,64.5 399.1,69.7 403.0,64.1 406.9,57.1 410.8,50.9 414.8,47.5 418.7,41.2 422.6,46.5 426.5,51.4 430.4,45.8 434.3,49.3 438.2,41.9 442.1,48.0 446.0,52.1 450.0,59.2 453.9,52.7 457.8,49.2 461.7,43.2 465.6,48.0 469.5,44.2 473.4,36.7 477.3,28.0 481.2,21.9 485.2,17.7 489.1,23.0 493.0,17.2 496.9,12.0 500.8,17.1 504.7,23.6 508.6,29.5 512.5,35.1 516.4,32.9 520.4,26.7 524.3,30.2 528.2,34.4 532.1,39.5 536.0,43.9 539.9,38.3 543.8,43.7 547.7,48.3 551.6,51.4 555.6,55.3 559.5,51.2 563.4,55.6 567.3,51.1 571.2,56.4 575.1,61.3 579.0,66.8 582.9,70.9 586.8,75.8 590.8,71.0 594.7,67.0 598.6,71.9 602.5,66.7 606.4,60.0 610.3,65.1 614.2,71.0 618.1,75.6 622.0,68.3 626.0,72.5 629.9,76.2 633.8,80.8 637.7,86.3 641.6,81.7 645.5,87.1 649.4,82.5 653.3,77.0 657.2,82.5 661.2,89.1 665.1,94.4 669.0,99.5 672.9,104.9 676.8,98.3 680.7,94.3 684.6,98.7 688.5,93.5 692.4,85.6 696.4,88.7 700.3,93.2 704.2,98.9 708.1,93.8 712.0,98.2" fill="none" stroke="var(--good)" stroke-width="2.2" stroke-linejoin="round"/></svg>
+<table class="stats">
+<tr><td>Net profit</td><td class="pos">$26,676.72 (+26.68%)</td></tr>
+<tr><td>Win rate</td><td>51.1%</td></tr>
+<tr><td>Average win / average loss</td><td>$1,485.49 / -$1,249.87</td></tr>
+<tr><td>Profit factor</td><td>1.24</td></tr>
+<tr><td>Average per trade</td><td>$148.20</td></tr>
+<tr><td>Largest drawdown</td><td>-$23,772.56 (23.77%)</td></tr>
+<tr><td>Worst day</td><td>-$4,576.46 (-4.58%)</td></tr>
+<tr><td>Longest losing streak</td><td>5 trades</td></tr>
+<tr><td>Commission and swap paid</td><td>$405.40 (0.3% of gross profit)</td></tr>
+</table>
+</section>
+
+<section>
+<h2>Stability</h2>
+<p class="sub">The two halves of your history disagree, so the edge may not be stable.</p>
+<table>
+<tr><th>Period</th><th>Win rate</th><th>Average per trade</th></tr>
+<tr><td>First half of trades</td><td>58%</td><td class="pos">$367.41</td></tr>
+<tr><td>Second half of trades</td><td>44%</td><td class="neg">-$71.00</td></tr>
+</table>
+</section>
+
+<section>
+<h2>By symbol</h2>
+<table><tr><th>Symbol</th><th>Trades</th><th>Win rate</th><th>Net</th></tr><tr><td>XAUUSD</td><td>95</td><td>52%</td><td class='pos'>$15,544.21</td></tr><tr><td>EURUSD</td><td>56</td><td>54%</td><td class='pos'>$10,620.26</td></tr><tr><td>US100.cash</td><td>29</td><td>45%</td><td class='pos'>$512.25</td></tr></table>
+</section>
+
+<details>
+<summary>How this was calculated</summary>
+<p>Net results are profit plus commission plus swap for each closed position. The luck test flips the direction of each trade at random, keeping its size, and counts how often those versions match your average result. The challenge simulation picks whole trading days from your history at random, keeps the trades inside each day in order, and checks the rules after every closed trade. Floating losses on open trades are not visible in a history report, so real daily drawdowns can be deeper than shown. Starting balance used: $100,000.00.</p>
+<p>This is a statistical look at past trades. It is not financial advice and cannot guarantee future results.</p>
+</details>
+
+<footer>
+<p>Made with propcheck 1.0.0. Want a strategy or EA tested across markets with real costs? I do custom tests. <a href="https://www.fiverr.com/YOUR_USERNAME">Get in touch</a>.</p>
+</footer>
+</main></body></html>

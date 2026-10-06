@@ -1,0 +1,8 @@
+__pycache__/
+*.pyc
+# keep your own reports private
+*_propcheck.html
+!examples/*_propcheck.html
+ReportHistory*.html
+!examples/ReportHistory-example.html
+ReportHistory*.xlsx
