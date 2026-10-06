@@ -8,6 +8,7 @@ propcheck reads your MetaTrader 5 trade history and gives you an honest answer i
 - **Skill or luck.** Your trades are compared with thousands of random-direction versions of the same trades.
 - **Challenge pass rate.** Your real trading days are replayed thousands of times against prop-firm rules (profit target, daily loss limit, max loss) to estimate how often you would pass.
 - **Stability.** Do your early and recent trades agree?
+-    Works with any MT5 account and any market: forex, gold, indices or crypto. Results come from each trade's profit, commission and swap in your account currency (USD, EUR, GBP and others are detected automatically).
 
 ![Example report](examples/report-screenshot.png)
 
@@ -37,6 +38,7 @@ The screenshot uses made-up example trades. Open `examples/ReportHistory-example
 | `--max-days` | 60 | Give up after this many trading days |
 | `--balance` | auto | Starting balance, if it can't be detected from the report |
 | `--sims` | 5000 | Number of simulations |
+   | `--currency` | auto | Account currency, e.g. `EUR` (detected from MT5 reports) |
 
 Example with a 2-step challenge's second phase (5% target):
 
