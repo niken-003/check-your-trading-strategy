@@ -63,11 +63,9 @@ This is a statistical look at past trades. **It is not financial advice** and ca
 ## Privacy
 
 Everything runs on your own computer. Your report is never uploaded anywhere. MT5 reports contain your account number and name, so don't commit your own reports to a public repository (the `.gitignore` here helps prevent that).
-
-## Want a deeper test?
-
-propcheck analyses trades you've already taken. If you want a strategy or EA **backtested across several markets and timeframes with real costs**, I do that as a service: **[YOUR FIVERR LINK](https://www.fiverr.com/YOUR_USERNAME)**
-
 ## License
 
 MIT. Free to use, modify and share.
+
+   ## Contact
+ Questions, custom strategy testing, or collaboration: **niken003gurung@gmail.com**
