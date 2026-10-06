@@ -69,5 +69,3 @@ Everything runs on your own computer. Your report is never uploaded anywhere. MT
 
 MIT. Free to use, modify and share.
 
-   ## Contact
- Questions, custom strategy testing, or collaboration: **niken003gurung@gmail.com**
